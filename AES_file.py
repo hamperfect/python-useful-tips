@@ -1,3 +1,6 @@
+from Crypto.Cipher import AES
+import hashlib
+
 def derive_key_and_iv(password, salt, key_length, iv_length):
     d = d_i = ''
     while len(d) < key_length + iv_length:
