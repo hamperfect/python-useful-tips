@@ -34,3 +34,10 @@ def decrypt(in_file, out_file, password, key_length=32):
             chunk = chunk[:-padding_length]
             finished = True
         out_file.write(chunk)
+
+######################################usage###############################################
+
+with open(in_filename, 'rb') as in_file, open(out_filename, 'wb') as out_file:
+    encrypt(in_file, out_file, password)
+with open(in_filename, 'rb') as in_file, open(out_filename, 'wb') as out_file:
+    decrypt(in_file, out_file, password)
